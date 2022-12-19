@@ -29,7 +29,7 @@ export async function getServerSideProps(context) {
 
     return {
         props: {
-            meetups: DUMMY_MEETUPS;
+            meetups: DUMMY_MEETUPS
         }
     }
 }
