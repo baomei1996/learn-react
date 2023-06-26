@@ -1,18 +1,18 @@
 import "./ExpenseItem.css";
 
-function ExpenseItem() {
-  const expenseDate = new Date();
-  const expenseTitle = "Car Insurance";
-  const expenseAmount = 294.67;
-
-  console.log(expenseDate);
+function ExpenseItem({ date, title, amount }) {
+  const month = date.toLocaleString("en-US", { month: "long" });
+  const day = date.toLocaleString("en-US", { day: "2-digit" });
+  const year = date.getFullYear();
 
   return (
     <div className="expense-item">
-      <div>{expenseDate}</div>
-      <div>
-        <h2 className="expense-item__description">{expenseTitle}</h2>
-        <div className="expense-item__price">{`$${expenseAmount}`}</div>
+      <div>{month}</div>
+      <div>{day}</div>
+      <div>{year}</div>
+      <div className="expense-item__description">
+        <h2>{title}</h2>
+        <div className="expense-item__price">{`$${amount}`}</div>
       </div>
     </div>
   );
