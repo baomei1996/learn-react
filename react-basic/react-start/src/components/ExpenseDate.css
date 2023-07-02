@@ -1,0 +1,15 @@
+.expense-date__month {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.expense-date__day {
+  color: white;
+  font-size: 1rem;
+  font-weight: semibold;
+}
+.expense-date__year {
+  color: white;
+  font-size: 1rem;
+  font-weight: semibold;
+}
