@@ -35,8 +35,19 @@ const ExpenseForm = () => {
     // });
   };
 
+  const submitHandler = (event) => {
+    // 기본 요청이 보내지는 것을 막기 위해
+    event.preventDefault();
+
+    const expenseData = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate),
+    };
+  };
+
   return (
-    <form className="new-expense__controls">
+    <form className="new-expense__controls" onSubmit={submitHandler}>
       <div className="new-expense__control">
         <label>Title</label>
         <input type="text" onChange={titleChangeHandler} />
